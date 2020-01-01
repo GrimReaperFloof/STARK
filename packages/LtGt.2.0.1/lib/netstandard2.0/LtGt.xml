@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>LtGt</name></assembly>
+<members>
+<member name="P:LtGt.HtmlAttribute.Previous(LtGt.HtmlAttribute)">
+<summary>
+ Previous attribute.
+ This property can be null.
+</summary>
+</member>
+<member name="P:LtGt.HtmlAttribute.Parent(LtGt.HtmlElement)">
+<summary>
+ Parent element that contains this attribute.
+ This property can be null.
+</summary>
+</member>
+<member name="P:LtGt.HtmlAttribute.Next(LtGt.HtmlAttribute)">
+<summary>
+ Next attribute.
+ This property can be null.
+</summary>
+</member>
+<member name="P:LtGt.HtmlAttribute.Previous">
+<summary>
+ Previous attribute.
+ This property can be null.
+</summary>
+</member>
+<member name="P:LtGt.HtmlAttribute.Parent">
+<summary>
+ Parent element that contains this attribute.
+ This property can be null.
+</summary>
+</member>
+<member name="P:LtGt.HtmlAttribute.Next">
+<summary>
+ Next attribute.
+ This property can be null.
+</summary>
+</member>
+<member name="P:LtGt.HtmlNode.Previous(LtGt.HtmlNode)">
+<summary>
+ Previous node.
+ This property can be null.
+</summary>
+</member>
+<member name="P:LtGt.HtmlNode.Parent(LtGt.HtmlContainer)">
+<summary>
+ Parent container of this node.
+ This property can be null.
+</summary>
+</member>
+<member name="P:LtGt.HtmlNode.Next(LtGt.HtmlNode)">
+<summary>
+ Next node.
+ This property can be null.
+</summary>
+</member>
+<member name="P:LtGt.HtmlNode.Previous">
+<summary>
+ Previous node.
+ This property can be null.
+</summary>
+</member>
+<member name="P:LtGt.HtmlNode.Parent">
+<summary>
+ Parent container of this node.
+ This property can be null.
+</summary>
+</member>
+<member name="P:LtGt.HtmlNode.Next">
+<summary>
+ Next node.
+ This property can be null.
+</summary>
+</member>
+<member name="T:LtGt.ParseException">
+<summary>
+ Exception thrown when parsing fails.
+</summary>
+</member>
+<member name="M:LtGt.Utils.htmlDecode(System.String)">
+<summary>
+ Decodes reserved HTML characters in a string.
+</summary>
+</member>
+<member name="M:LtGt.Utils.htmlEncode(System.String)">
+<summary>
+ Encodes reserved HTML characters in a string.
+</summary>
+</member>
+<member name="M:LtGt.Utils.op_LessAmpGreater``1(Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean},Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean},``0)">
+<summary>
+ Combines two predicates using AND.
+</summary>
+</member>
+<member name="M:LtGt.Utils.String.split(System.Char,System.String)">
+<summary>
+ Splits a string using specified char separator.
+</summary>
+</member>
+<member name="M:LtGt.Utils.String.trim(System.String)">
+<summary>
+ Trims whitespace in a string.
+</summary>
+</member>
+<member name="M:LtGt.Utils.String.ordinalContainsCI(System.String,System.String)">
+<summary>
+ Checks that first string contains second string according to ordinal comparison rules, disregarding differences in case.
+</summary>
+</member>
+<member name="M:LtGt.Utils.String.ordinalEndsWithCI(System.String,System.String)">
+<summary>
+ Checks that first string ends with second string according to ordinal comparison rules, disregarding differences in case.
+</summary>
+</member>
+<member name="M:LtGt.Utils.String.ordinalStartsWithCI(System.String,System.String)">
+<summary>
+ Checks that first string starts with second string according to ordinal comparison rules, disregarding differences in case.
+</summary>
+</member>
+<member name="M:LtGt.Utils.String.ordinalHashCI(System.String)">
+<summary>
+ Calculates hashcode of a string using ordinal comparer which ignores differences in case.
+</summary>
+</member>
+<member name="M:LtGt.Utils.String.ordinalHash(System.String)">
+<summary>
+ Calculates hashcode of a string using ordinal comparer.
+</summary>
+</member>
+<member name="M:LtGt.Utils.String.ordinalEqualsCI(System.String,System.String)">
+<summary>
+ Checks that two strings are equal according to ordinal comparison rules, disregarding differences in case.
+</summary>
+</member>
+<member name="M:LtGt.Utils.String.ordinalEquals(System.String,System.String)">
+<summary>
+ Checks that two strings are equal according to ordinal comparison rules.
+</summary>
+</member>
+<member name="M:LtGt.ParsingUtils.runWithResult``1(Microsoft.FSharp.Core.FSharpFunc{FParsec.CharStream{Microsoft.FSharp.Core.Unit},FParsec.Reply{``0}},System.String)">
+<summary>
+ Runs parser on source and produces a result union.
+</summary>
+</member>
+<member name="M:LtGt.HtmlRules.isVoidElementTagName(System.String)">
+<summary>
+ Checks whether the specified element tag name belongs to &quot;void elements&quot; category.
+</summary>
+</member>
+<member name="M:LtGt.HtmlRules.isRawTextElementTagName(System.String)">
+<summary>
+ Checks whether the specified element tag name belongs to &quot;raw text elements&quot; category.
+</summary>
+</member>
+<member name="P:LtGt.HtmlRules.voidElementTagNames">
+<summary>
+ List of element tag names that belong to &quot;void elements&quot; category.
+ These elements can&apos;t have children and don&apos;t need a closing tag.
+</summary>
+</member>
+<member name="P:LtGt.HtmlRules.rawTextElementTagNames">
+<summary>
+ List of element tag names that belong to &quot;raw text elements&quot; category.
+ These elements can only contain text inside and that text doesn&apos;t need to be encoded.
+</summary>
+</member>
+<member name="M:LtGt.HtmlEquality.htmlHash(LtGt.HtmlEntity)">
+<summary>
+ Calculates hashcode for specified HTML entity.
+</summary>
+</member>
+<member name="M:LtGt.HtmlEquality.htmlEquals(LtGt.HtmlEntity,LtGt.HtmlEntity)">
+<summary>
+ Compares two HTML entities and returns whether they are logically equal.
+</summary>
+</member>
+<member name="M:LtGt.HtmlEquality.op_LessMultiplyGreater(System.Int32,System.Int32)">
+<summary>
+ Diffuses hash.
+</summary>
+</member>
+<member name="M:LtGt.Html.ParseNode(System.String)">
+<summary>
+ Parses input string as an HTML node or raises an exception in case of failure.
+</summary>
+</member>
+<member name="M:LtGt.Html.ParseElement(System.String)">
+<summary>
+ Parses input string as an HTML element or raises an exception in case of failure.
+</summary>
+</member>
+<member name="M:LtGt.Html.ParseDocument(System.String)">
+<summary>
+ Parses input string as an HTML document or raises an exception in case of failure.
+</summary>
+</member>
+<member name="M:LtGt.Html.TryParseNode(System.String)">
+<summary>
+ Tries to parse input string as an HTML node.
+</summary>
+</member>
+<member name="M:LtGt.Html.TryParseElement(System.String)">
+<summary>
+ Tries to parse input string as an HTML element.
+</summary>
+</member>
+<member name="M:LtGt.Html.TryParseDocument(System.String)">
+<summary>
+ Tries to parse input string as an HTML document.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogicExtensions.Clone(LtGt.HtmlEntity)">
+<summary>
+ Creates a deep copy of an entity.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogicExtensions.ToXObject(LtGt.HtmlEntity)">
+<summary>
+ Converts an entity to its equivalent LINQ2XML representation.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogicExtensions.ToHtml(LtGt.HtmlEntity)">
+<summary>
+ Renders an entity as HTML code.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogicExtensions.GetInnerText(LtGt.HtmlNode)">
+<summary>
+ Gets inner text.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogicExtensions.GetElementsByClassName(LtGt.HtmlContainer,System.String)">
+<summary>
+ Gets all descendant elements that are matched by the specified class name.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogicExtensions.GetElementsByTagName(LtGt.HtmlContainer,System.String)">
+<summary>
+ Gets all descendant elements that are matched by the specified tag name.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogicExtensions.GetElementById(LtGt.HtmlContainer,System.String)">
+<summary>
+ Gets the first descendant element by the value of its &quot;id&quot; attribute or returns null if not found.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogicExtensions.GetDescendantElements(LtGt.HtmlContainer)">
+<summary>
+ Gets all descendant elements (i.e. children and children of children recursively).
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogicExtensions.GetDescendants(LtGt.HtmlContainer)">
+<summary>
+ Gets all descendant nodes (i.e. children and children of children recursively).
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogicExtensions.GetNextSiblings(LtGt.HtmlNode)">
+<summary>
+ Gets all of the node&apos;s siblings that appear after it in the DOM.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogicExtensions.GetPreviousSiblings(LtGt.HtmlNode)">
+<summary>
+ Gets all of the node&apos;s siblings that appear before it in the DOM.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogicExtensions.GetSiblings(LtGt.HtmlNode)">
+<summary>
+ Gets all of the node&apos;s siblings.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogicExtensions.GetAncestors(LtGt.HtmlNode)">
+<summary>
+ Gets all of the node&apos;s ancestors, from immediate parent to the root node.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogicExtensions.ClassNameMatches(LtGt.HtmlElement,System.String)">
+<summary>
+ Checks whether the class name of an element matches specified class name.
+ This function works by splitting both class names by space and checking if the element contains all individual
+ classes in the list.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogicExtensions.IdMatches(LtGt.HtmlElement,System.String)">
+<summary>
+ Checks whether an element has specified value of &quot;id&quot; attribute.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogicExtensions.TagNameMatches(LtGt.HtmlElement,System.String)">
+<summary>
+ Checks whether an element has specified tag name.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogicExtensions.GetClassNames(LtGt.HtmlElement)">
+<summary>
+ Gets the value of the &quot;class&quot; attribute as a list of space-separated elements.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogicExtensions.GetClassName(LtGt.HtmlElement)">
+<summary>
+ Gets the value of the &quot;class&quot; attribute or returns null if it&apos;s not set.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogicExtensions.GetId(LtGt.HtmlElement)">
+<summary>
+ Gets the value of the &quot;id&quot; attribute or returns null if it&apos;s not set.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogicExtensions.GetAttributeValue(LtGt.HtmlElement,System.String)">
+<summary>
+ Gets the value of an attribute by its name or returns null if attribute is not found.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogicExtensions.GetAttribute(LtGt.HtmlElement,System.String)">
+<summary>
+ Gets an attribute by name or returns null if not found.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogic.clone(LtGt.HtmlEntity)">
+<summary>
+ Creates a deep copy of an entity.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogic.toXObject(LtGt.HtmlEntity)">
+<summary>
+ Converts an entity to its equivalent LINQ2XML representation.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogic.toHtml(LtGt.HtmlEntity)">
+<summary>
+ Renders an entity as HTML code.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogic.innerText(LtGt.HtmlNode)">
+<summary>
+ Gets inner text.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogic.elementsByClassName(System.String,LtGt.HtmlContainer)">
+<summary>
+ Gets all descendant elements that are matched by the specified class name.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogic.elementsByTagName(System.String,LtGt.HtmlContainer)">
+<summary>
+ Gets all descendant elements that are matched by the specified tag name.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogic.tryElementById(System.String,LtGt.HtmlContainer)">
+<summary>
+ Tries to find the first descendant element by the value of its &quot;id&quot; attribute.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogic.descendantElements(LtGt.HtmlContainer)">
+<summary>
+ Gets all descendant elements (i.e. children and children of children recursively).
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogic.descendants(LtGt.HtmlContainer)">
+<summary>
+ Gets all descendant nodes (i.e. children and children of children recursively).
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogic.filterElements(System.Collections.Generic.IEnumerable{LtGt.HtmlNode})">
+<summary>
+ Filters a sequence of nodes by elements.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogic.nextSiblings(LtGt.HtmlNode)">
+<summary>
+ Gets all of the node&apos;s siblings that appear after it in the DOM.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogic.previousSiblings(LtGt.HtmlNode)">
+<summary>
+ Gets all of the node&apos;s siblings that appear before it in the DOM.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogic.siblings(LtGt.HtmlNode)">
+<summary>
+ Gets all of the node&apos;s siblings.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogic.ancestors(LtGt.HtmlNode)">
+<summary>
+ Gets all of the node&apos;s ancestors, from immediate parent to the root node.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogic.classNameMatches(System.String,LtGt.HtmlElement)">
+<summary>
+ Checks whether the class name of an element matches specified class name.
+ This function works by splitting both class names by space and checking if the element contains all individual
+ classes in the list.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogic.idMatches(System.String,LtGt.HtmlElement)">
+<summary>
+ Checks whether an element has specified value of &quot;id&quot; attribute.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogic.tagNameMatches(System.String,LtGt.HtmlElement)">
+<summary>
+ Checks whether an element has specified tag name.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogic.classNames(LtGt.HtmlElement)">
+<summary>
+ Gets the value of the &quot;class&quot; attribute as a list of space-separated elements.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogic.tryClassName(LtGt.HtmlElement)">
+<summary>
+ Tries to get the value of the &quot;class&quot; attribute.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogic.tryId(LtGt.HtmlElement)">
+<summary>
+ Tries to get the value of the &quot;id&quot; attribute.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogic.tryAttributeValue(System.String,LtGt.HtmlElement)">
+<summary>
+ Tries to find an attribute by name and get its value.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogic.tryAttribute(System.String,LtGt.HtmlElement)">
+<summary>
+ Tries to find an attribute by name.
+</summary>
+</member>
+<member name="M:LtGt.HtmlLogic.tryAsElement(LtGt.HtmlNode)">
+<summary>
+ Tries to cast a node to an element.
+</summary>
+</member>
+<member name="M:LtGt.CssSelectorLogicExtensions.QueryElements(LtGt.HtmlContainer,System.String)">
+<summary>
+ Gets all descendant elements that are matched by the specified CSS selector.
+</summary>
+</member>
+<member name="M:LtGt.CssSelectorLogic.queryElements(System.String,LtGt.HtmlContainer)">
+<summary>
+ Gets all descendant elements that are matched by the specified CSS selector.
+</summary>
+</member>
+</members>
+</doc>
