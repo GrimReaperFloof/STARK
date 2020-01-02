@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\ILMerge.3.0.29\build\ILMerge.props" Condition="Exists('..\packages\ILMerge.3.0.29\build\ILMerge.props')" />
   <Import Project="..\packages\Costura.Fody.4.1.0\build\Costura.Fody.props" Condition="Exists('..\packages\Costura.Fody.4.1.0\build\Costura.Fody.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -197,6 +198,31 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Fody.6.0.5\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fody.6.0.5\build\Fody.targets'))" />
     <Error Condition="!Exists('..\packages\Costura.Fody.4.1.0\build\Costura.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Costura.Fody.4.1.0\build\Costura.Fody.props'))" />
+    <Error Condition="!Exists('..\packages\ILMerge.3.0.29\build\ILMerge.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ILMerge.3.0.29\build\ILMerge.props'))" />
+  </Target>
+  <ItemGroup>
+    <PackageReference Include="ILMerge" Version="3.0.29" />
+  </ItemGroup>
+
+  <Target Name="ILMerge">
+    <!-- the ILMergePath property points to the location of ILMerge.exe console application -->
+    <Exec Command="$(ILMergeConsolePath) Bin\Release\STARK.exe ^
+    /out:STARK.exe ^
+    Bin\Release\AngleSharp.dll ^
+    Bin\Release\ControlzEx.dll ^ 
+    Bin\Release\Costura.dll ^ 
+    Bin\Release\FParsec.dll ^ 
+    Bin\Release\FParsecCS.dll ^ 
+    Bin\Release\FSharp.Core.dll ^ 
+    Bin\Release\LtGt.dll ^ 
+    Bin\Release\MahApps.Metro.dll ^ 
+    Bin\Release\NAudio.dll ^ 
+    Bin\Release\Newtonsoft.Json.dll ^ 
+    Bin\Release\Sprache.dll ^ 
+    Bin\Release\System.ValueTuple.dll ^ 
+    Bin\Release\System.Windows.Interactivity.dll ^ 
+    Bin\Release\YoutubeExplode.dll ^ 
+    Bin\Release\YoutubeSearch.dll " />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
